@@ -1,0 +1,94 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(-130deg, rgb(166, 166, 2), orangered);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 800px;
+    height: 500px;
+    background: #ffffff;
+    border-radius: 20px;
+    display: flex;
+    box-shadow: -1px 2px 38px 6px rgba(42, 42, 42, 0.75);
+    -webkit-box-shadow: -1px 2px 38px 6px rgba(42, 42, 42, 0.75);
+    -moz-box-shadow: -1px 2px 38px 6px rgba(42, 42, 42, 0.75);
+}
+.card-right{
+    background: linear-gradient(130deg, rgb(255, 81, 0), rgb(255, 0, 0));
+    width: 150%;
+    height: 80%;
+    border-radius: 20px;
+    position: relative;
+    left: -50px;
+    top: 10%;
+    box-shadow: 10px 10px 23px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 23px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 23px 0px rgba(0,0,0,0.75);
+}
+.card-content{
+    position: relative;
+    top: 30%;
+}
+.card-content p:first-child{
+    color: grey;
+    font-size:18px;
+    position: relative;
+    top: -40px;
+}
+.card-content h4{
+    line-height: 50px;
+    font-weight: 600;
+    color: orangered;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.card-content .para{
+    color:grey;
+    margin-top: 10px;
+    line-height: 20px;
+}
+.card-content button{
+    margin-top: 30px;
+    width: 40%;
+    background: linear-gradient(130deg, rgb(230, 4, 4), orangered);
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 25px;
+    border: 2px solid transparent;
+    outline: none;
+    cursor: pointer;
+    transition: ease-in .7s;
+}
+.card-content button:hover{
+    transition: ease-out .5s;
+    border: 2px solid orangered;
+    background: transparent;
+    color: orangered;
+}
+.card-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+.circle1, .circle2{
+    width: 10px;
+    height: 10px;
+    background: grey;
+    border-radius: 50%;
+}
+.line{
+    width: 10px; height: 40px;
+    background: orangered;
+    border-radius: 10px;
+    margin:10px 0;
+}
