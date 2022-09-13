@@ -1,0 +1,78 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg, rgb(160, 238, 236), rgb(4, 131, 124));
+
+}
+ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+ul li{
+    width: 200px;
+    height: 200px;
+    padding: 10px 20px;
+    margin: 20px 30px;
+    list-style: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: .2s;
+    border: 2px dotted transparent;
+    animation-name: listanimate;
+    animation-timing-function: ease-in;
+    animation-duration: 3s;
+}
+@keyframes listanimate {
+    from{
+        transform: translateY(-100vh);
+        background: linear-gradient(135deg, white, lightseagreen);
+    }
+    to{
+        transform: translateY(0);
+
+    }
+}
+
+ul li:nth-child(1n){
+    background-color: lightcoral;
+    transform: rotate(8deg);
+}
+ul li:nth-child(2n){
+    background-color: lightseagreen;
+    transform: rotate(-8deg);
+}
+ul li:nth-child(3n){
+    background-color: lightgreen;
+}
+ul li:nth-child(4n){
+    background-color: yellowgreen;
+}
+ul li a{
+    text-decoration: none;
+}
+ul li a h2{
+    color: darkmagenta;
+    margin: 10px 0;
+    letter-spacing: 2px;
+}
+ul li a p{
+    color: rgb(87, 27, 1);
+
+}
+ul li span{
+    position: absolute;
+    right: -5px; top: -5px;
+    color: orangered;
+    cursor: pointer;
+}
+ul li:hover, ul li a:focus{
+    transition: .2s;
+    cursor: pointer;
+    border: 2px dotted green;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 38px, rgba(0, 0, 0, 0.22) 0px 0px 12px;
+
+}
