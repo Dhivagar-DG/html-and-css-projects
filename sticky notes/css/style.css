@@ -24,7 +24,7 @@ ul li{
     border: 2px dotted transparent;
     animation-name: listanimate;
     animation-timing-function: ease-in;
-    animation-duration: 3s;
+    animation-duration: 2s;
 }
 @keyframes listanimate {
     from{
