@@ -161,7 +161,6 @@ nav menu ul li.product a:hover:before{
     height: calc(100vh - 70px);
     background: rgb(70, 70, 70);
     display: none;
-    transition: all .5s ease;
     position: fixed;
     transform: translateX(0%);
     transition: all .5s ease-in-out;
