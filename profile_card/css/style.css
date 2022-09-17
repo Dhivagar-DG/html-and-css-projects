@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, rgb(231, 137, 212) 80%, rgb(234, 6, 215));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 500px;
+    height: 600px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.card-img{
+    width: 100%;
+    height: 30%;
+    background:  linear-gradient(rgba(128, 73, 0, 0.213), rgba(0, 102, 128, 0.23)),url(../images/lion.jpg) no-repeat center;
+    background-size: 100% 120%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.card-content{
+    width: 100%;
+    height: 70%;
+}
+.card-content span:nth-child(1):not(.follow span){
+    background: gainsboro;
+    padding: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.card-content span:nth-child(1) i{
+    font-size: 50px;
+    text-align: center;
+}
+.dots{
+    position: absolute;
+    right: 60px;
+    top: 35%;
+    font-size: 18px;
+    font-weight: bold;
+}
+.card-text{
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.card-text h2{
+    padding: 0 20px;
+    color: orangered;
+}
+.card-text h2+p{
+    margin-top: 1px;
+    padding: 0 20px;
+    color: rgb(114, 114, 114);
+}
+.follow{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 50px;
+}
+.follow span{
+    display: block;
+    text-align: center;
+    color: orangered;
+    font-weight: 600;
+    padding: 3px;
+    font-size: 28px;
+}
+.follow a{
+    text-decoration: none;
+    color: rgb(114, 114, 114);
+    letter-spacing: 1px;
+}
+.card-text p{
+    padding: 30px;
+    line-height: 20px;
+    color: rgb(114, 114, 114);
+    text-align: justify;
+}
+button{
+    padding: 10px 10px;
+    width: 400px;
+    margin-top: 40px;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    background-color: orangered;
+    border: 2px solid transparent;
+    color: white;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+button:hover{
+    transform: scale(1.1);
+    background: transparent;
+    color: orangered;
+    border: 2px solid orangered;
+    font-weight: bold;
+}
