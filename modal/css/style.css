@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    padding: 10px 50px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    background-color: orangered;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    position: relative;
+}
+.btn::after{
+    content: "Click to View Modal Box";
+    color: black;
+    width: 100%;
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+}
+button:active{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.661);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
+}
+.modal-dialog{
+    width: 600px;
+    height: 400px;
+    background: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    transform: translateY(-120%);
+    transition: .5s;
+
+}
+.modal-content{
+    border: 1px solid rgb(181, 181, 181);
+    border-radius: 5px;
+    padding: 10px 20px;
+    height: 90%;
+    position: relative;
+}
+.modal-header h2{
+    color: orangered;
+    margin-bottom: 50px;
+    padding: 10px 0;
+    letter-spacing: 1px;
+    border-bottom: 2px solid gainsboro;
+}
+.modal-text p{
+    line-height: 25px ;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: rgb(81, 77, 77);
+}
+.modal-footer{
+    background: grey;
+    width: 100%;
+    height: 20%;
+}
+.btnClose{
+    padding: 10px 50px;
+    position: absolute;
+    bottom: 20px;
+    background: rgb(143, 10, 28);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.modal.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal.show .modal-dialog{
+    transform: translateY(0%);
+}
