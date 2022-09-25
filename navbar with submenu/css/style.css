@@ -1,0 +1,113 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+}
+ul li{
+    list-style: none;
+}
+header{
+    width: 100%;
+    height: 70px;
+    background: rgb(15, 1, 41);
+    z-index: 99;
+}
+header nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+header nav > a{
+    font-size: 30px;
+    color: rgb(150, 250, 0);
+    text-align: center;
+    line-height: 70px;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    float: left;
+}
+nav ul li a{
+    font-weight: 18px;
+    color: white;
+    display: block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: .5s;
+    height: 100%;
+}
+nav ul li a:hover{
+    background: rgb(150, 250, 0);
+    color: black;
+}
+ul li.courses{
+    position: relative;
+}
+ul li.courses ul{
+    position: absolute;
+    background: rgb(55, 55, 55);
+    width: 150px;
+    display: none;
+}
+ul li.courses ul li{
+    width: 100%;
+}
+ul li.courses ul li a{
+    border-radius: 0;
+    text-align: center;
+}
+ul li.courses:hover > ul,
+ul li.courses:focus-within > ul{
+    display: block;
+}
+ul li.courses ul li.webDesign{
+    position: relative;
+}
+ul li.courses ul li.webDesign ul{
+    position: absolute;
+    left: 101%;
+    top:0;
+    display: none;
+}
+ul li.courses ul li.webDesign:hover > ul{
+    display: block;
+}
+input[type='checkbox'], .bar{
+    display: none;
+}
+.bar i{
+    font-size: 22px;
+    color: white;
+}
+@media (max-width:992px) {
+ nav > ul{
+    position: absolute;
+    top: 70px;
+    display: block;
+    background: rgb(15, 1, 41);
+    width: 100%;
+    transform: translateX(-100%);
+    transition: .5s;
+    opacity: 0;
+ }
+ input[type='checkbox']:checked ~ ul{
+    transform: translateX(0%);
+    opacity: 1;
+ }
+ nav ul li a:hover{
+    border-radius: 0;
+ }
+ .bar{
+    display: block;
+ }
+}
