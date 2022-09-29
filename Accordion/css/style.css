@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: gainsboro;
+}
+.accordian{
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    width: 60rem;
+}
+label{
+    width: 100%;
+    display: block;
+    padding: 15px 10px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    background: rgb(97, 97, 97);
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+}
+label span{
+    position: absolute;
+    right: 10px;
+}
+.card{
+    padding: 0px 15px;
+    border: 1px solid white;
+}
+.content{
+    display: block;
+    height: 0;
+    overflow: hidden;
+    transition: .5s ;
+}
+input[type="radio"]{ display: none;}
+input[type="radio"]:checked ~ .content{
+    height: auto;
+    padding: 20px 5px;
+    font-size: 1rem;
+    color: rgb(105, 105, 105);
+    background: rgba(220, 220, 220, 0.709);
+}
+input[type="radio"]:checked ~ label{ color: rgb(0, 136, 255);}
+input[type="radio"]:checked ~ label span{
+    transform: rotate(180deg);
+    color: rgb(50, 121, 183);
+}
